@@ -1,0 +1,11 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## 0.1.1-alpha.0 (2021-06-12)
+
+
+### Features
+
+* support first version ([bc425dc](https://github.com/wenytang-ms-123/TestAction/commit/bc425dc45e9241156b1e2af5dcae65cd2df2b57c))
