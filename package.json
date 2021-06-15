@@ -1,0 +1,25 @@
+{
+  "name": "TestAction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "npm install && npm run bootstrap --hoist",
+    "bootstrap": "lerna bootstrap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenytang-ms-123/TestAction.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wenytang-ms-123/TestAction/issues"
+  },
+  "homepage": "https://github.com/wenytang-ms-123/TestAction#readme",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
