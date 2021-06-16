@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.0](https://github.com/wenytang-ms-123/TestAction/compare/@wenyt-ms/alpha-1@0.1.1-alpha.4...@wenyt-ms/alpha-1@0.2.0-alpha.0) (2021-06-16)
+
+
+### Features
+
+* add consoel.log on alpha ([366c9c4](https://github.com/wenytang-ms-123/TestAction/commit/366c9c42bec380ce7ed4071adcd7417bc78c614f))
+* add log ([301ba57](https://github.com/wenytang-ms-123/TestAction/commit/301ba57b3835b8cd9cfc72c411695d8723a22bad))
+* remove console log on alpha ([9d5e2e2](https://github.com/wenytang-ms-123/TestAction/commit/9d5e2e276f1bbfae3fc296f7c551962d541adf28))
+
+
+
+
+
 ## [0.1.1-alpha.4](https://github.com/wenytang-ms-123/TestAction/compare/@wenyt-ms/alpha-1@0.1.1-alpha.3...@wenyt-ms/alpha-1@0.1.1-alpha.4) (2021-06-12)
 
 
