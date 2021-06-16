@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0-alpha.4](https://github.com/wenytang-ms-123/TestAction/compare/@wenyt-ms/beta-1@0.1.0-alpha.3...@wenyt-ms/beta-1@0.1.0-alpha.4) (2021-06-16)
+
+
+### Features
+
+* add console log on beta ([82a6115](https://github.com/wenytang-ms-123/TestAction/commit/82a611514bdffefaf33cba18dde009c1412b0dbd))
+
+
+
+
+
 # [0.1.0-alpha.3](https://github.com/wenytang-ms-123/TestAction/compare/@wenyt-ms/beta-1@0.1.0-alpha.2...@wenyt-ms/beta-1@0.1.0-alpha.3) (2021-06-12)
 
 **Note:** Version bump only for package @wenyt-ms/beta-1
