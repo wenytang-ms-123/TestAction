@@ -4,5 +4,5 @@
     "dependencies": {
         "@wenyt-ms/alpha-1": "^2.0.0",
         "@wenyt-ms/beta-1": "^2.0.0"
-      },
+    }
 }
