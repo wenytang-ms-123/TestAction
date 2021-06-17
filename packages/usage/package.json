@@ -1,8 +1,8 @@
 {
     "name": "@wenyt-ms/usage-1",
-    "version": "4.0.0",
+    "version": "4.0.1-alpha.0",
     "dependencies": {
-        "@wenyt-ms/alpha-1": "^4.0.0",
-        "@wenyt-ms/beta-1": "^4.0.0"
+        "@wenyt-ms/alpha-1": "^4.0.1-alpha.0",
+        "@wenyt-ms/beta-1": "^4.0.1-alpha.0"
     }
 }
