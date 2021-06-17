@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0-rc.0](https://github.com/wenytang-ms-123/TestAction/compare/@wenyt-ms/alpha-1@4.1.0-alpha.0...@wenyt-ms/alpha-1@4.1.0-rc.0) (2021-06-17)
+
+
+### Features
+
+* remove console.log on windows ([df43e2f](https://github.com/wenytang-ms-123/TestAction/commit/df43e2f700955afbd19437321f1c0fbd360ff3a3))
+
+
+
+
+
 # [4.1.0-alpha.0](https://github.com/wenytang-ms-123/TestAction/compare/@wenyt-ms/alpha-1@4.0.1-alpha.0...@wenyt-ms/alpha-1@4.1.0-alpha.0) (2021-06-17)
 
 
