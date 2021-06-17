@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.2-alpha.0](https://github.com/wenytang-ms-123/TestAction/compare/@wenyt-ms/beta-1@5.0.1...@wenyt-ms/beta-1@5.0.2-alpha.0) (2021-06-17)
+
+
+### Features
+
+* add console log on beta ([579a847](https://github.com/wenytang-ms-123/TestAction/commit/579a84769784b8f357a2c3dbf74b93d20b2067d6))
+* add console logs ([1554dca](https://github.com/wenytang-ms-123/TestAction/commit/1554dca706695488500e686ef23fbac45da57fec))
+
+
+
+
+
 ## [5.0.1](https://github.com/wenytang-ms-123/TestAction/compare/@wenyt-ms/beta-1@4.0.2...@wenyt-ms/beta-1@5.0.1) (2021-06-17)
 
 **Note:** Version bump only for package @wenyt-ms/beta-1
