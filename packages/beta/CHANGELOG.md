@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.2-rc.0](https://github.com/wenytang-ms-123/TestAction/compare/@wenyt-ms/beta-1@4.0.1...@wenyt-ms/beta-1@4.0.2-rc.0) (2021-06-17)
+
+
+### Bug Fixes
+
+* fix bugs on beta ([4e67396](https://github.com/wenytang-ms-123/TestAction/commit/4e67396cb801c170e4a111f2488674c27642927a))
+
+
+
+
+
 ## [4.0.1](https://github.com/wenytang-ms-123/TestAction/compare/@wenyt-ms/beta-1@4.0.1-alpha.1...@wenyt-ms/beta-1@4.0.1) (2021-06-17)
 
 **Note:** Version bump only for package @wenyt-ms/beta-1
