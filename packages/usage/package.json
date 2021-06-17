@@ -1,11 +1,11 @@
 {
     "name": "@wenyt-ms/usage-1",
-    "version": "4.0.2",
+    "version": "5.0.0",
     "scripts": {
         "hello": "echo hello"
     },
     "dependencies": {
-        "@wenyt-ms/alpha-1": "^4.1.1",
-        "@wenyt-ms/beta-1": "^4.0.2"
+        "@wenyt-ms/alpha-1": "^5.0.0",
+        "@wenyt-ms/beta-1": "^5.0.0"
     }
 }
