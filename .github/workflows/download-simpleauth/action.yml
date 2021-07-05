@@ -16,19 +16,3 @@ runs:
     steps:
       - run: echo Hi ${{ inputs.your_name }}
         shell: bash
-      - run: echo os ${{runner.os}}
-        shell: bash
-      - run: echo action step env.foo ${{ env.foo }}
-        env: 
-          foo: this is foo 2
-        shell: bash
-      - run: echo '::set-env name=foo::this is foo 3'
-        shell: bash
-      - run: echo new env.foo for everything ${{ env.foo }}
-        shell: bash
-      - id: random_number_generator
-        run: echo "::set-output name=random_id::$(echo $RANDOM)"
-        shell: bash
-      - id: food
-        run: echo "::set-output name=test::strawberry"
-        shell: bash
