@@ -28,8 +28,6 @@ jobs:
       - uses: ./.github/workflows/download-simpleauth
         with:
           your_name: "Octocat"
-      - name: test outputs
-        run: | 
-          echo test outputs random: ${{ steps.composite1.outputs.random_number}} 
-          echo test outputs food: ${{ steps.composite1.outputs.food}} 
+      - name: Download Simple Auth bits
+        uses: ./.github/workflows/download-simpleauth
 

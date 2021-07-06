@@ -1,18 +1,18 @@
-name: "Composite Action Test"
-description: "Run multiple run steps"
-inputs:
-  your_name:
-    description: 'Your name'
-    default: 'Ethan'
-outputs:
-  random_number: 
-    description: "Random number"
-    value: ${{ steps.random_number_generator.outputs.random_id }}
-  food: 
-    description: "Food"
-    value: ${{ steps.food.outputs.test }}
+name: "Download Simple Auth"
+description: "Download Simple Auth bits from github release"
 runs:
     using: "composite"
     steps:
-      - run: echo Hi ${{ inputs.your_name }}
-        shell: bash
+      - name: Download Simple Auth bits
+        uses: nick-invision/retry@v2
+        with:
+          timeout_minutes: 10
+          max_attempts: 10
+          retry_on: error
+          shell: pwsh
+          command: |
+            $tag = "simpleauth@0.1.0"
+            $fileName="Microsoft.TeamsFx.SimpleAuth_0.1.0.zip"
+            $url = "https://github.com/OfficeDev/TeamsFx/releases/download/"+$tag+"/"+$fileName
+            Invoke-WebRequest $url -OutFile packages/fx-core/templates/plugins/resource/simpleauth/SimpleAuth.zip
+
