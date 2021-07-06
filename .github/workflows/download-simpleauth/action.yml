@@ -4,6 +4,7 @@ runs:
     using: "composite"
     steps:
       - name: Download Simple Auth bits
+        shell: pwsh
         run: |
           $tag = "simpleauth@0.1.0"
           $fileName="Microsoft.TeamsFx.SimpleAuth_0.1.0.zip"
