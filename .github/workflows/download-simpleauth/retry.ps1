@@ -36,6 +36,6 @@ function Retry-Command {
 Retry-Command -ScriptBlock {
     $tag = "simpleauth@0.1.0"
     $fileName="Microsoft.TeamsFx.SimpleAuth_0.1.0.zip"
-    $url = "https://github.com/OfficeDev/TeamsFx/releases/download/"+$tag+"/"+$fileName
+    $url = "https://github.com/OfficeDev/TeamsFx/releases/download/1"+$tag+"/"+$fileName
     Invoke-WebRequest $url -OutFile ./SimpleAuth.zip
 } -Maximum 10
