@@ -28,7 +28,7 @@ jobs:
       - name: Update my-file.json description
         uses: jossef/action-set-json-field@v1
         with:
-            file: pacakge.json
+            file: ./package.json
             field: aiKey
             value: ${{ secrets.AIKEY }}
       - name: package-update
