@@ -25,10 +25,23 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       # Runs a single command using the runners shell
+      - name: Update my-file.json description
+        uses: jossef/action-set-json-field@v1
+        with:
+            file: pacakge.json
+            field: aiKey
+            value: ${{ secrets.AIKEY }}
       - name: package-update
         uses: taichi/actions-package-update@master
         env:
-          AIKEY: ${{secrets.AIKEY}}
+          AUTHOR_EMAIL: wenytang@wenytang.onmicrosoft.com
+          AUTHOR_NAME: wenytang-ms-123
+          EXECUTE: "true"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LOG_LEVEL: debug
         with:
           args: -u --packageFile package.json --loglevel verbose
+      - name: echo
+        run: |
+          echo package.json
 
