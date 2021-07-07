@@ -31,17 +31,17 @@ jobs:
             file: ./package.json
             field: aiKey
             value: ${{ secrets.AIKEY }}
-      - name: package-update
-        uses: taichi/actions-package-update@master
-        env:
-          AUTHOR_EMAIL: wenytang@wenytang.onmicrosoft.com
-          AUTHOR_NAME: wenytang-ms-123
-          EXECUTE: "true"
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LOG_LEVEL: debug
-        with:
-          args: -u --packageFile package.json --loglevel verbose
+      - name: Setup git
+        run: |
+          git config --global user.name 'wenytang-ms-123'
+          git config --global user.email 'wenytang@microsofr.com'
+
+      - name: commit
+        run: |
+          git add .
+          git commit -m "chore: update AI key"
+
       - name: echo
         run: |
-          echo package.json
+          less package.json
 
