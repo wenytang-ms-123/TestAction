@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.2.0](https://github.com/wenytang-ms-123/TestAction/compare/@wenyt-ms/alpha-1@6.2.0-rc.0...@wenyt-ms/alpha-1@6.2.0) (2021-07-21)
+
+**Note:** Version bump only for package @wenyt-ms/alpha-1
+
+
+
+
+
+# [6.2.0-rc.0](https://github.com/wenytang-ms-123/TestAction/compare/@wenyt-ms/alpha-1@6.1.3-alpha.0...@wenyt-ms/alpha-1@6.2.0-rc.0) (2021-07-21)
+
+
+### Features
+
+* alpha ([1211bfe](https://github.com/wenytang-ms-123/TestAction/commit/1211bfe410adb18a57aedd975cfcddcb788c1e37))
+* alpha ([faeb275](https://github.com/wenytang-ms-123/TestAction/commit/faeb275714d3f2ae38152f71efe55715064211a0))
+
+
+
+
+
 ## [6.1.3](https://github.com/wenytang-ms-123/TestAction/compare/@wenyt-ms/alpha-1@6.1.3-alpha.0...@wenyt-ms/alpha-1@6.1.3) (2021-07-09)
 
 **Note:** Version bump only for package @wenyt-ms/alpha-1
