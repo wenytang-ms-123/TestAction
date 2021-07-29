@@ -11,23 +11,22 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   cd:
-  build:
     runs-on: ubuntu-latest
-  steps:
-    - name: Checkout branch
-      uses: actions/checkout@v2
-      with:
-        ref: ${{ github.ref }}
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
 
-    - name: add tag
-      run: |
-        git tag 'v1.1.1'
+      - name: add tag
+        run: |
+          git tag 'v1.1.1'
 
-    - name: Set the value
-      id: step_one
-      run: |
-        echo "action_state=$(git tag --points-at HEAD)" >> $GITHUB_ENV
-    - name: Use the value
-      id: step_two
-      run: |
-        echo "${{ env.action_state }}" 
+      - name: Set the value
+        id: step_one
+        run: |
+          echo "action_state=$(git tag --points-at HEAD)" >> $GITHUB_ENV
+      - name: Use the value
+        id: step_two
+        run: |
+          echo "${{ env.action_state }}" 
