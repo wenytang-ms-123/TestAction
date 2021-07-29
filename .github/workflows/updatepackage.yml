@@ -18,10 +18,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
   steps:
-    - uses: actions/checkout@master
-    - name: package-update
-      uses: taichi/actions-package-update@master
-      env:
-        AIKEY: ${{secrets.AIKEY}}
+    - name: Checkout branch
+      uses: actions/checkout@v2
       with:
-        args: -u --packageFile package.json --loglevel verbose
+        ref: ${{ github.ref }}
+    - name: add tag
+      run: |
+        git tag 'v1.1.1'
+
+    - name: Set the value
+    id: step_one
+    run: |
+      echo "action_state=$(git tag --points-at HEAD)" >> $GITHUB_ENV
+    - name: Use the value
+    id: step_two
+    run: |
+      echo "${{ env.action_state }}" 
