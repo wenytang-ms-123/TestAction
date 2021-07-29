@@ -21,6 +21,7 @@ jobs:
       - name: add tag
         run: |
           git tag 'v1.1.1'
+          git tag 'simple@1.1.1'
 
       - name: Set the value
         run: |
