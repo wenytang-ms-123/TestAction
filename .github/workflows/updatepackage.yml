@@ -23,10 +23,8 @@ jobs:
           git tag 'v1.1.1'
 
       - name: Set the value
-        id: step_one
         run: |
-          echo "action_state=$(git tag --points-at HEAD)" >> $GITHUB_ENV
+          echo "action_state=$(git tag --points-at HEAD | grep v)" >> $GITHUB_ENV
       - name: Use the value
-        id: step_two
         run: |
           echo "${{ env.action_state }}" 
