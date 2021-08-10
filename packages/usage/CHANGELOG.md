@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.8](https://github.com/wenytang-ms-123/TestAction/compare/@wenyt-ms/usage-1@6.0.7...@wenyt-ms/usage-1@6.0.8) (2021-08-10)
+
+**Note:** Version bump only for package @wenyt-ms/usage-1
+
+
+
+
+
 ## [6.0.7](https://github.com/wenytang-ms-123/TestAction/compare/@wenyt-ms/usage-1@6.0.6...@wenyt-ms/usage-1@6.0.7) (2021-08-10)
 
 **Note:** Version bump only for package @wenyt-ms/usage-1
