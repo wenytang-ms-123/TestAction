@@ -51,3 +51,12 @@ jobs:
         run: |
           less package.json
 
+  release:
+    runs-on: ubuntu-latest
+    environment: Production_ENV
+    steps:
+      - name: test env
+        env:
+          pat: ${{env.PUBLISH_PAT}}
+        run: |
+          echo $pat
