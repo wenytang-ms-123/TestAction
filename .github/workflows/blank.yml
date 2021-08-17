@@ -55,8 +55,12 @@ jobs:
     runs-on: ubuntu-latest
     environment: Production_ENV
     steps:
-      - name: test env
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Test env vars for python
+        run: python -c 'import os;print(os.environ)'
         env:
-          pat: ${{env.PUBLISH_PAT}}
-        run: |
-          echo $pat
+          ENV_SECRET: ${{ secrets.PUBLISH_PAT }} 
+          REPO_SECRET: ${{ secrets.AIKEY }} 
