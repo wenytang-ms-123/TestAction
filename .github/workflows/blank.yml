@@ -24,6 +24,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+
+      - name: echo aikey
+        env: 
+          aikey: ${{ secrets.AIKEY }}
+        run: | 
+          echo $aikey
       # Runs a single command using the runners shell
       - name: Update my-file.json description
         uses: jossef/action-set-json-field@v1
