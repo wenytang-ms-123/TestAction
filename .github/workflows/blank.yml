@@ -60,7 +60,7 @@ jobs:
         with:
           python-version: 3.8
       - name: Test env vars for python
-        run: python -c 'import os;print(os.environ)'
-        # env:
-        #   ENV_SECRET: ${{ secrets.PUBLISH_PAT }} 
-        #   REPO_SECRET: ${{ secrets.AIKEY }} 
+        run: echo $REPO_SECRET
+        env:
+          ENV_SECRET: ${{ secrets.PUBLISH_PAT }} 
+          REPO_SECRET: ${{ secrets.AIKEY }} 
