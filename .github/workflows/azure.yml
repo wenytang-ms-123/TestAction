@@ -1,4 +1,4 @@
-name: azure pipeline
+name: azure login
 
 on:
   workflow_dispatch:
@@ -9,6 +9,4 @@ jobs:
     steps:
       - uses: azure/login@v1
         with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-      - run: |
-        echo "123123"
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
