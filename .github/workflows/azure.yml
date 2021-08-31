@@ -13,5 +13,7 @@ jobs:
         env:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
         run: |
+          clientId =$(echo $1 | jq -r '.clientId')
+          echo $clientId
           bash login.sh $creds
         working-directory: ./.github/workflows/scripts
