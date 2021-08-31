@@ -7,6 +7,8 @@ jobs:
   login:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: uses: actions/checkout@v2
       - name: login with token
         run: |
           bash login.sh ${{ secrets.AZURE_CREDENTIALS }}
