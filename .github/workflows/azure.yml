@@ -8,7 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: login with token
-        env:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
         run: |
-          bash .github/workflows/scripts/login.sh
+          bash login.sh ${{ secrets.AZURE_CREDENTIALS }}
+        working-directory: ./.github/workflows/scripts
