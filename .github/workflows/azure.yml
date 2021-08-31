@@ -10,5 +10,8 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: login with token
+        env:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
         run: |
-          echo ${{ secrets.AZURE_CREDENTIALS }} | jq -r '.clientId'
+          bash login.sh $creds
+        working-directory: ./.github/workflows/scripts
