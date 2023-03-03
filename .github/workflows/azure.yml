@@ -2,19 +2,34 @@ name: azure login
 
 on:
   workflow_dispatch:
+    inputs:
+      run_id:
+        description: 'input the CD pipeline run ID to fetch the artifact'
+        required: true
+        default: ''
 
 jobs:
   login:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v3
-
-      - name: update json
-        uses: restack/update-json-file-action@v1.1
+      - name: Setup node
+        uses: actions/setup-node@v2.1.2
         with:
-          file: pacakges/beta/pacakge.json
-          fields: "{'version': '1.2.4', 'aiKey': '1233425234653264'}"
+          node-version: 14
+      - name: Install VSCE command
+        run: |
+          npm install vsce -g
+      - name: Download release artifacts
+        uses: Legit-Labs/action-download-artifact@v2
+        with:
+          run_id: ${{ github.event.input.run_id }}
+          name: release
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          path: .
+      - name: unzip artifacts
+        run: |
+          unzip release.zip
       - name: echo json
         run: |
-          echo pacakges/beta/pacakge.json
+          ls 
+          ls release
