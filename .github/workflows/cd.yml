@@ -28,5 +28,5 @@ jobs:
         with:
           name: release
           path: |
-            *.vsix
+            *.visx
             *.exe
