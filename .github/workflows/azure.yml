@@ -9,9 +9,11 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: login with token
-        env:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: update json
+        uses: restack/update-json-file-action@v1.1
+        with:
+          file: pacakges/beta/pacakge.json
+          fields: "{'version': '1.2.4', 'aiKey': '1233425234653264'}"
+      - name: echo json
         run: |
-          bash login.sh
-        working-directory: ./.github/workflows/scripts
+          echo pacakges/beta/pacakge.json
