@@ -18,14 +18,15 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-      - name: add tag
+      - name: create exe
         run: |
-          git tag 'v1.1.1'
-          git tag 'simple@1.1.1'
+          touch aaa.exe
+          touch bbb.visx
 
-      - name: Set the value
-        run: |
-          echo "action_state=$(git tag --points-at HEAD | grep v)" >> $GITHUB_ENV
-      - name: Use the value
-        run: |
-          echo "${{ env.action_state }}" 
+      - name: upload release info to artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: release
+          path: |
+            *.vsix
+            *.exe
