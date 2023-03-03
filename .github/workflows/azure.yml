@@ -27,10 +27,9 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: cd.yml
           path: .
-      - name: unzip artifacts
-        run: |
-          unzip release.zip
+      # - name: unzip artifacts
+      #   run: |
+      #     unzip release.zip
       - name: echo json
         run: |
-          ls 
-          ls release
+          ls
