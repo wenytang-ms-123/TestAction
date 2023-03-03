@@ -25,6 +25,7 @@ jobs:
           run_id: ${{ github.event.input.run_id }}
           name: release
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: cd.yml
           path: .
       - name: unzip artifacts
         run: |
