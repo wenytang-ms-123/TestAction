@@ -24,7 +24,7 @@ jobs:
         run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >>$GITHUB_OUTPUT
         id: extract_branch
       - name: Download release artifacts
-        uses: LexisNexis-GHA-Public/action-download-artifact@v2.14.0.0
+        uses: LexisNexis-GHA-Public/action-download-artifact@v2
         with:
           run_id: ${{ github.event.input.run_id }}
           name: release
