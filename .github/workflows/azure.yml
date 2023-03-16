@@ -23,15 +23,31 @@ jobs:
         shell: bash
         run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >>$GITHUB_OUTPUT
         id: extract_branch
-      - name: Download release artifacts
-        uses: LexisNexis-GHA-Public/action-download-artifact@v2
+      - name: Download artifact
+        id: downloadUrl
+        uses: actions/github-script@v6
         with:
-          run_id: ${{ github.event.input.run_id }}
-          name: release
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          workflow: cd.yml
-          path: .
-          branch: ${{ steps.extract_branch.outputs.branch }}
+          script: |
+            let allArtifacts = await github.rest.actions.listWorkflowRunArtifacts({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              run_id: ${{ github.event.input.run_id }},
+            });
+            let matchArtifact = allArtifacts.data.artifacts.filter((artifact) => {
+              return artifact.name == "release"
+            })[0];
+            let download = await github.rest.actions.downloadArtifact({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              artifact_id: matchArtifact.id,
+              archive_format: 'zip',
+            });
+            let fs = require('fs');
+            fs.writeFileSync(`${process.env.GITHUB_WORKSPACE}/release.zip`, Buffer.from(download.data));
+            return matchArtifact.url
+
+      - name: Unzip artifact
+        run: unzip release.zip
       # - name: unzip artifacts
       #   run: |
       #     unzip release.zip
