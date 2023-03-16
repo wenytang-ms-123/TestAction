@@ -19,14 +19,19 @@ jobs:
       - name: Install VSCE command
         run: |
           npm install vsce -g
+      - name: Extract branch name
+        shell: bash
+        run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >>$GITHUB_OUTPUT
+        id: extract_branch
       - name: Download release artifacts
-        uses: Legit-Labs/action-download-artifact@v2
+        uses: LexisNexis-GHA-Public/action-download-artifact@v2.14.0.0
         with:
           run_id: ${{ github.event.input.run_id }}
           name: release
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: cd.yml
           path: .
+          branch: ${{ steps.extract_branch.outputs.branch }}
       # - name: unzip artifacts
       #   run: |
       #     unzip release.zip
