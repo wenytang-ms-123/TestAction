@@ -15,9 +15,5 @@ jobs:
     steps:
       - name: set state
         run: |
-          test="2132"
-          echo "preid=$test" >> $GITHUB_STATE
-      
-      - name: output state
-        run: |
-          printenv
+          echo ${{ github.event_name }}
+          echo ${{ github.ref }}
