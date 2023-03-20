@@ -20,4 +20,4 @@ jobs:
       
       - name: output state
         run: |
-          echo ======================== $STATE_preid
+          printenv
