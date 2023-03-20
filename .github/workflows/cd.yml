@@ -10,18 +10,41 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  precheck:
+    runs-on: ubuntu-latest
+    outputs:  
+      preid: ${{ steps.preidcheck.output.preid }}
+    steps:
+      - name: get preid
+        run: |
+          if [ "${{github.event_name}}" == 'schedule' ]
+          then
+            preid='alpha'
+            echo "preid=$preid" >> $GITHUB_OUTPUT
+          else
+            preid=${{ github.event.inputs.preid}}
+            echo "preid=$preid" >> $GITHUB_OUTPUT
+
   cd:
     runs-on: ubuntu-latest
+    needs: precheck
+    if: ${{ needs.precheck.outputs.preid }}
+    strategy:
+      fail-fast: false
+      matrix:
+        preid: ${{ needs.precheck.outputs.preid }}
+    name: ${{ matrix.preid }}
     steps:
       - name: Checkout branch
         uses: actions/checkout@v2
         with:
           ref: ${{ github.ref }}
 
-      - name: create exe
+      - name: output
         run: |
+          echo ${{matrix.preid}}
           touch aaa.exe
-          touch bbb.visx
+          touch b123.visx
 
       - name: upload release info to artifact
         uses: actions/upload-artifact@v3
