@@ -1,0 +1,22 @@
+name: "for test schedule"
+run-name: this is a test name ${{inputs.preid}}
+on:
+  workflow_dispatch:
+    inputs:
+      preid:
+        description: "this is a test"
+        default: "rc"
+  schedule: 
+    - cron: "*/10 * * * *"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: |
+          echo "123"
+      - name: sss
+        if: ${{ github.event.inputs.preid }}
+        run: |
+          echo ${{ github.event.inputs.preid }}
