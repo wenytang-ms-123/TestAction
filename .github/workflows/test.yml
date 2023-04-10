@@ -1,13 +1,11 @@
 name: "for test schedule"
-run-name: this is a test name ${{inputs.preid}}
+run-name: this is a test name ${{github.event.inputs.preid}}
 on:
   workflow_dispatch:
     inputs:
       preid:
         description: "this is a test"
         default: "rc"
-  schedule: 
-    - cron: "*/10 * * * *"
 
 jobs:
   test:
